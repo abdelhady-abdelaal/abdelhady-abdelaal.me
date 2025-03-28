@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>Projects</h1>
+
+<section class="row row-cols-1 row-cols-lg-2">
+	@foreach (var project in Model.Projects)
+	{
+		<section class="col">
+			<partial name="./_ProjectCardPartial" model="@project" />
+		</section>
+	}
+</section>

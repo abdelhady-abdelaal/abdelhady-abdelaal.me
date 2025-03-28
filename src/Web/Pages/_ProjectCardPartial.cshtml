@@ -1,0 +1,26 @@
+﻿@model Project
+@{
+	string mainThumbnail = Model.Thumbnails.First();
+}
+
+<section class="card">
+	<img src="@mainThumbnail"
+		 alt=""
+		 class="card-img-top" />
+
+	<section class="card-body">
+		<section class="d-flex align-items-center mb-2 justify-content-between">
+			<h1 class="m-0">@Model.Name</h1>
+			<p class="small text-secondary m-0">Published on <time>Jun 23, 2025</time></p>
+		</section>
+		<section class="mb-3">
+			@foreach (var tag in Model.Tags)
+			{
+				<p class="badge bg-success opacity-75 rounded-pill px-2 fw-normal mb-0"># @tag</p>
+			}
+		</section>
+
+		<p class="card-text">@Model.Teaser</p>
+		<a href="#" class="btn btn-primary">Learn more</a>
+	</section>
+</section>

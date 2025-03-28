@@ -1,0 +1,7 @@
+# Visual Studio Output
+
+.vs/
+
+# Project Build Outputs
+bin/
+obj/
